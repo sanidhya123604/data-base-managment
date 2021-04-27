@@ -1,0 +1,25 @@
+create table employee
+(
+id number(8),
+name varchar(20),
+age number(3),
+address varchar(30), 
+salary number(10)
+);
+describe employee;   // this is used to seee the all the column of the table
+alter table employee
+add (dob date);      // this is used tom add new column in the table
+alter table employee
+alter table employee
+drop column dob;       // this is used to delete the column 
+alter table employee
+modify name varchar(35);    // this is used to modify the column 
+alter table employee
+rename to employee1;     // this is used to change the table name
+describe employee1;
+alter table employee1
+rename  column id to employee_id;  // this is used to change the column name 
+drop table employee1;           // this is used to delete the table 
+truncate table employee1;        // this is used to removing all rows from the table
+
+
