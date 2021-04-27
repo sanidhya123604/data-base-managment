@@ -1,0 +1,22 @@
+create table employee
+(
+id number(5),
+name varchar(20),
+dept varchar(20),
+doj date,
+dob date,
+salary number(10)
+);
+insert into employee values(1,'ram kumar','mca','27-jul-2009','15-aug-1982',25000);
+insert into employee values(2,'ram amain jain','mca','27-jul-2008','15-aug-1985',20000);
+insert into employee(id,name,dept,doj,dob) values(3,'anita verma','mca','17-may-2009','25-sep-1985');
+insert into employee values(4,'anjali','cs','12-jun-2010','15-july-1985',20000);
+insert into employee values(5,'rohan','IT','27-jul-2009','10-aug-1982',35000);
+insert into employee values(6,'jatin','cs','27-jul-2009','10-aug-1982',40000);
+select *from employee  ;
+select *from employee
+where dept = 'mca'; 
+select id,name,dept from employee;
+
+select id,name,dept from employee
+where salary = 20000;
