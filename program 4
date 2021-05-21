@@ -1,0 +1,51 @@
+create table empl
+(
+empid number(5),
+name varchar(30),
+dept varchar(10),
+doj date,
+dob date,
+salary number(5)
+);
+DESC empl;      //this is used to tell about the table that is no. of column and and types
+
+insert into empl(empid,name,dept,doj,dob,salary)values(1,'lavi','mba','10-jan-2020','1-dec-1997',25000);
+insert into empl(empid,name,dept,doj,dob,salary)values(2,'sourav','mca','3-dec-2019','3-feb-1998',30000);
+insert into empl(empid,name,dept,doj,dob,salary)values(3,'abhishek','mba','7-march-2018','17-april-1996',23000);
+insert into empl(empid,name,dept,doj,dob,salary)values(4,'sakshi','b.phrma','10-april-2018','10-april-1990',27000);
+insert into empl(empid,name,dept,doj,dob,salary)values(5,'monu','d.pharma','18-jan-2019','01-dec-1994',33000);
+insert into empl(empid,name,dept,doj,dob)values(6,'sanidhya','mca','20-dec-2017','28-oct-1990');
+
+select * from empl        // this is used to show all the data in the table
+
+select name,dept,salary    // this is used to select particular columns
+from empl;
+
+select * from empl            // where operation or condition
+where salary>30000;
+
+select empid,name,dept,salary
+from empl
+where salary>30000;
+
+select * from empl           // this is used to telll about the null value in the columns
+where salary is null;         
+
+select * from empl          // and operation
+where empid = 2 
+and name = 'sourav';
+
+select * from empl             // or operatiom
+where empid = 2 
+or name = 'sanidhya';
+
+select * from empl                // In operation 
+where dept in 'mca';
+
+select * from empl                  // betweeen operation
+where empid between 4 and 5;
+
+select *  from empl                        // between with in   
+where (salary between 20000 and 30000)
+and dept in ('mca','mba');
+
